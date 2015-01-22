@@ -15,51 +15,116 @@
     <link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic' rel='stylesheet' type='text/css'>
     
 
+
 </head>
 
 <body>
 
     <div id="top"></div>
     <div class="contain-to-grid sticky">
-	
         <nav class="top-bar" data-topbar>
-            <ul class="title-area">
-                <li class="name">
+			<ul class="title-area">
+                <li id="nav" class="name">
                     <h1>
                         <a href="#">Bing Xu Hu</a>
                     </h1>
                 </li>
             </ul>
-			
             <section class="top-bar-section">
                 <!-- left Nav Section -->
                 <ul id="nav" class="left">
                     <li>
-                        <a href="#top" title="Cardo">Home</a>
+                        <a href="#top" >Home</a>
                     </li>
 
                     <li>
-                        <a href="#about" title="Cardo">About Me</a>
+                        <a href="#about" >About Me</a>
                     </li>
                     <li>
-                        <a href="#Resume">Resume</a>
+                        <a href="#resume">Resume</a>
                     </li>
                     <li>
-                        <a href="#contact" title="Cardo">Contact</a>
+                        <a href="#contact" s>Contact</a>
                     </li>
                 </ul>
             </section>
         </nav>
     </div>
-	
-	<section class="sample" id="bringhurst">
-		<section class="text">
-			
+	<section class="white_bg">
+		<div class="quote" id="bringhurst">
+			<div class="text">
 				<h1><span>Kurt Lewin</h1>
 				<p><span>&ldquo;</span>A successful individual typically sets his next goal somewhat but not too much above his last achievement. In this way he steadily raises his level of aspiration.<span>&rdquo;</span></p>
-		
-		</section>
+			</div>
+		</div>
 	</section>
-
+	
+    <section id="about">
+		<div class="row">
+			<div class="small-8 columns">
+				<div class="main" id="fatface">
+					<h1>Bingxu Hu</h1>
+				</div>
+				<div class="main" id="opensans">
+					<p>Morbi auctor lacinia mi nec suscipit. Vivamus eget dui dignissim, fermentum leo nec, suscipit nunc. Etiam feugiat lacinia sapien, lacinia hendrerit orci fermentum vitae. Quisque posuere vitae elit vitae ornare. Praesent ornare quam id. Morbi auctor lacinia mi nec suscipit. Vivamus eget dui dignissim, fermentum leo nec, suscipit nunc. Etiam feugiat lacinia sapien, lacinia hendrerit orci fermentum vitae. Quisque posuere vitae elit vitae ornare. Praesent ornare quam id.</p>
+				</div>
+			</div>
+			<div class="small-4 columns">
+				<li>
+                    <img src="img/image1.jpg" alt="image1">
+					<div class="main" id="opensans">
+						<p>Phasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec nisi. Maecenas et turpis vitae velit volutpat porttitor a sit amet est. Uthasellus facilisis, nunc in lacinia auctor, eros lacus aliquet velit, quis lobortis risus nunc nec.</p>
+					</div>
+				</li>
+			</div>
+		</div>
+    </section>
+	
+		<section id="resume">
+		<div class="white_bg2">
+		<div class="row">
+			<div class="small-4 columns">
+			<img src="img/image1.jpg" alt="image1">
+			</div>
+			<div class="small-4 columns">
+			<img src="img/image1.jpg" alt="image1">
+			</div>
+			<div class="small-4 columns">
+			<img src="img/image1.jpg" alt="image1">
+			</div>
+		</div>
+		</div>
+	</section>
+	
+	<section id="contact">
+		
+	</section>
+		<script>
+	console.log("WTF");
+		</script>
+    <script src="js/vendor/jquery.js" type="text/javascript"></script>
+    <script src="js/foundation.min.js"></script>
+    <script type="text/javascript">
+        $(document).foundation();
+    </script>
+    <script>
+        $(function() {
+		console.log("WTF");
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+			
+        });
+    </script>
+</body>
 
 </html>
